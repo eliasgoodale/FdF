@@ -6,7 +6,7 @@
 #    By: egoodale <eligoodale1@gmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/21 11:46:19 by egoodale          #+#    #+#              #
-#    Updated: 2018/03/19 16:10:10 by egoodale         ###   ########.fr        #
+#    Updated: 2018/04/08 11:33:21 by egoodale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,14 +87,14 @@ OBJ		= $(patsubst %.c, %.o, $(FILES))
 all: $(NAME)
 		
 $(NAME):	
-		gcc $(CFLAGS) $(FILES)
-		ar rcs $(NAME) $(OBJ)
-		ranlib $(NAME)
+		@gcc $(CFLAGS) $(FILES)
+		@ar rcs $(NAME) $(OBJ)
+		@ranlib $(NAME)
 
 clean:
-		rm -f $(OBJ)
+		@rm -f $(OBJ)
 
 fclean: clean
-		rm -f $(NAME)
+		@rm -f $(NAME)
 
 re: fclean all
